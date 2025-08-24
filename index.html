@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        The <head> section contains metadata about your document.
+        This information is not displayed on the page itself but is crucial
+        for the browser, search engines, and other web services.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Web Developer</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGATION ===== -->
+<header>
+  <button class="hamburger" id="hamburger">☰</button>
+
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <!-- Theme Toggle Switch -->
+        <button id="theme-toggle">🌙</button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero">
+    <div class="container">
+      <h1>Hi, I'm Shivam Dubey</h1>
+      <p>Welcome to my personal portfolio website.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ME SECTION ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I’m Shivam Dubey, a passionate and curious engineering student at NIT Rourkela, with a strong interest in technology, problem-solving, and creative projects. I enjoy building responsive websites, experimenting with APIs, and exploring data structures and algorithms to sharpen my problem-solving skills.
+
+Beyond academics, I actively participate in clubs and organizations that help me grow in leadership, teamwork, and communication. I also enjoy public speaking and collaborating on ideas that combine creativity with technology.
+
+I believe in continuous learning and love turning ideas into functional projects that make an impact. My goal is to grow as a well-rounded professional while enjoying the process of learning, building, and innovating.
+    </p>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Smart Hospital Management System</h3>
+        <p>A web-based solution with AI-powered prescription generation.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>A modern app with location auto-detect, dark mode, and detailed forecasts.</p>
+      </div>
+      <div class="project-card">
+        <h3>Programming Adventure Game</h3>
+        <p>A fun way to learn Python through an adventure-style game.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mgvlwzqk" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 Shivam Dubey. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+</html>
