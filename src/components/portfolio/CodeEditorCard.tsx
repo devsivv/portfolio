@@ -109,6 +109,7 @@ export default function CodeEditorCard() {
 
   useEffect(() => {
     const currentLength = lineLengths[lineIdx];
+    const isLoopEnd = lineIdx === codeLines.length - 1 && charIdx >= currentLength;
     const timer = setTimeout(() => {
       if (charIdx < currentLength) {
         setCharIdx((prev) => prev + 1);
@@ -121,15 +122,15 @@ export default function CodeEditorCard() {
       }
       setLineIdx(0);
       setCharIdx(0);
-    }, 32);
+    }, isLoopEnd ? 700 : 52);
     return () => clearTimeout(timer);
   }, [charIdx, lineIdx, lineLengths]);
 
   return (
     <motion.div
       className="code-editor-shell"
-      animate={{ y: [0, -8, 0] }}
-      transition={{ repeat: Number.POSITIVE_INFINITY, duration: 4.8, ease: "easeInOut" }}
+      animate={{ y: [0, -4, 0] }}
+      transition={{ repeat: Number.POSITIVE_INFINITY, duration: 7, ease: "easeInOut" }}
     >
       <div className="code-editor-card">
         <div className="code-editor-topbar">

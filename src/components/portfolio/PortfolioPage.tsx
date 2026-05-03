@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { FaCode, FaExternalLinkAlt, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
-import CodeEditorCard from "@/components/portfolio/CodeEditorCard";
 import {
   aboutText,
   achievements,
@@ -14,6 +14,14 @@ import {
   skills,
   socialLinks,
 } from "@/data/portfolio";
+
+const CodeEditorCard = dynamic(
+  () => import("@/components/portfolio/CodeEditorCard"),
+  {
+    loading: () => <div className="code-editor-placeholder" />,
+    ssr: false,
+  }
+);
 
 const sectionLinks = [
   "home",
@@ -91,17 +99,17 @@ function Section({
     <motion.section
       id={id}
       className="mx-auto w-full max-w-6xl px-5 py-20 md:px-8"
-      initial={{ opacity: 0, y: 28 }}
+      initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.75, ease: "easeOut" }}
+      transition={{ duration: 0.45, ease: "easeOut" }}
     >
       <motion.div
         className="section-heading-wrap"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.8 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
       >
         <div className="section-badge">SECTION</div>
         <div className="section-title-row">
@@ -111,7 +119,7 @@ function Section({
             initial={{ scaleX: 0, opacity: 0.2 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.7, delay: 0.05, ease: "easeOut" }}
+            transition={{ duration: 0.45, delay: 0.03, ease: "easeOut" }}
           />
         </div>
         <motion.span
@@ -119,7 +127,7 @@ function Section({
           initial={{ width: 0, opacity: 0.2 }}
           whileInView={{ width: "100%", opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
         />
       </motion.div>
       {children}
@@ -154,16 +162,16 @@ function ThemeToggle() {
 
 export default function PortfolioPage() {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 140, damping: 22 });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
 
   const particles = useMemo(
     () =>
-      Array.from({ length: 18 }, (_, i) => ({
+      Array.from({ length: 10 }, (_, i) => ({
         id: i,
         left: `${(i * 17) % 100}%`,
-        size: 2 + ((i * 3) % 6),
-        duration: 12 + (i % 5) * 2,
-        delay: i * 0.35,
+        size: 2 + ((i * 2) % 4),
+        duration: 18 + (i % 4) * 2,
+        delay: i * 0.9,
       })),
     []
   );
@@ -177,22 +185,21 @@ export default function PortfolioPage() {
       <div className="pointer-events-none fixed inset-0 z-0 bg-layer bg-layer-purple" />
       <div className="pointer-events-none fixed inset-0 z-0">
         {particles.map((p) => (
-          <motion.span
+          <span
             key={p.id}
             className="particle"
-            style={{ left: p.left, width: p.size, height: p.size }}
-            animate={{ y: ["100vh", "-10vh"], opacity: [0, 0.8, 0] }}
-            transition={{
-              repeat: Number.POSITIVE_INFINITY,
-              duration: p.duration,
-              delay: p.delay,
-              ease: "linear",
+            style={{
+              left: p.left,
+              width: p.size,
+              height: p.size,
+              animationDuration: `${p.duration}s`,
+              animationDelay: `${p.delay}s`,
             }}
           />
         ))}
       </div>
 
-      <nav className="sticky top-0 z-40 border-b border-cyan-400/20 bg-[#050816]/70 backdrop-blur-xl">
+      <nav className="sticky top-0 z-40 border-b border-cyan-400/20 bg-[#050816]/78 backdrop-blur-lg">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-4 md:px-8">
           <p className="text-sm font-semibold tracking-[0.2em] text-cyan-300">
             SD.dev
@@ -220,18 +227,18 @@ export default function PortfolioPage() {
           <div className="hero-layout glass-card relative overflow-hidden p-8 md:p-12">
             <motion.div
               className="absolute -right-16 -top-14 h-44 w-44 rounded-full bg-cyan-400/10 blur-3xl"
-              animate={{ y: [0, 20, 0], x: [0, -10, 0] }}
-              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 8 }}
+              animate={{ y: [0, 10, 0], x: [0, -6, 0] }}
+              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 10 }}
             />
             <motion.div
               className="absolute -bottom-20 left-1/3 h-52 w-52 rounded-full bg-purple-500/10 blur-3xl"
-              animate={{ y: [0, -14, 0], x: [0, 18, 0] }}
-              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 9 }}
+              animate={{ y: [0, -8, 0], x: [0, 10, 0] }}
+              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 11 }}
             />
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
               className="z-10"
             >
               <h1 className="text-4xl font-black leading-tight md:text-6xl">
@@ -274,7 +281,7 @@ export default function PortfolioPage() {
             <motion.div
               initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
             >
               <CodeEditorCard />
             </motion.div>
@@ -297,8 +304,8 @@ export default function PortfolioPage() {
               <motion.article
                 key={category}
                 className="glass-card p-6"
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 250, damping: 20 }}
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.18, ease: "easeOut" }}
               >
                 <h3 className="mb-4 text-xl font-semibold text-cyan-300">
                   {category}
@@ -334,7 +341,8 @@ export default function PortfolioPage() {
               <motion.article
                 key={project.name}
                 className="project-card"
-                whileHover={{ y: -7 }}
+                whileHover={{ y: -3 }}
+                transition={{ duration: 0.18, ease: "easeOut" }}
               >
                 <div className="project-header">
                   <span className="dot red" />
@@ -391,12 +399,52 @@ export default function PortfolioPage() {
               </button>
             </form>
             <aside className="glass-card p-6">
-              <h3 className="text-lg font-semibold text-cyan-300">Get in touch</h3>
-              <p className="mt-3 text-slate-200">Email: shivam@example.com</p>
-              <p className="mt-2 text-slate-200">LinkedIn: linkedin.com/in/</p>
-              <p className="mt-2 text-slate-200">GitHub: github.com/</p>
-              <p className="mt-2 text-slate-200">Codeforces: codeforces.com/</p>
-            </aside>
+  <h3 className="text-lg font-semibold text-cyan-300">
+    Get in touch
+  </h3>
+
+  <div className="mt-5 space-y-4">
+
+    <a
+      href="mailto:shivamdubey9040@gmail.com"
+      className="flex items-center gap-3 text-slate-200 transition hover:text-cyan-300"
+    >
+      <span>📧</span>
+      <span>shivamdubey9040@gmail.com</span>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/shivam-dubey-32a55331a/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 text-slate-200 transition hover:text-cyan-300"
+    >
+      <span>💼</span>
+      <span>LinkedIn</span>
+    </a>
+
+    <a
+      href="https://github.com/devsivv/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 text-slate-200 transition hover:text-cyan-300"
+    >
+      <span>💻</span>
+      <span>GitHub</span>
+    </a>
+
+    <a
+      href="https://codeforces.com/profile/shivamdubey0021"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-3 text-slate-200 transition hover:text-cyan-300"
+    >
+      <span>🏆</span>
+      <span>Codeforces</span>
+    </a>
+
+  </div>
+</aside>
           </div>
         </Section>
       </main>

@@ -1,9 +1,31 @@
 export const socialLinks = [
-  { name: "GitHub", href: "https://github.com/", key: "github" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/", key: "linkedin" },
-  { name: "Codeforces", href: "https://codeforces.com/", key: "codeforces" },
-  { name: "LeetCode", href: "https://leetcode.com/", key: "leetcode" },
+  {
+    name: "GitHub",
+    href: "https://github.com/devsivv/",
+    key: "github",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/shivam-dubey-32a55331a/",
+    key: "linkedin",
+  },
+  {
+    name: "Codeforces",
+    href: "https://codeforces.com/profile/shivamdubey0021",
+    key: "codeforces",
+  },
+  {
+    name: "LeetCode",
+    href: "https://leetcode.com/u/shiv_cant_code/",
+    key: "leetcode",
+  },
 ];
+
+export const hero = {
+  name: "Shivam Dubey",
+  subtitle:
+    "Chemical Engineering Student | Competitive Programmer | Technical Leader",
+};
 
 export const skills = {
   Languages: ["Python", "C++", "JavaScript"],
@@ -38,39 +60,80 @@ export const projects = [
     name: "Industrial Report on Ammonia Synthesis",
     stack: ["Process Engineering", "Thermodynamics", "Technical Writing"],
     description:
-      "Detailed process study covering synthesis routes, operating conditions, and optimization insights for ammonia production.",
+      "Comprehensive industrial study on ammonia synthesis including process flow, thermodynamic optimization, and operational efficiency analysis.",
+    github: "#",
+    demo: "#",
   },
   {
     name: "Ethylene Oxide Process Analysis",
-    stack: ["Chemical Kinetics", "Reaction Engineering", "Data Analysis"],
+    stack: ["Reaction Engineering", "Chemical Kinetics", "Data Analysis"],
     description:
-      "Comprehensive industrial analysis of ethylene oxide production with focus on safety, efficiency, and reactor behavior.",
+      "Industrial process analysis focused on reactor performance, safety systems, and conversion optimization in ethylene oxide production.",
+    github: "#",
+    demo: "#",
   },
   {
     name: "Competitive Programming Dashboard",
-    stack: ["Next.js", "TypeScript", "APIs"],
+    stack: ["Next.js", "TypeScript", "REST APIs"],
     description:
-      "A personalized dashboard to track coding performance, contest analytics, and progress across coding platforms.",
+      "Interactive dashboard for tracking coding contests, rating progression, and performance analytics across multiple competitive programming platforms.",
+    github: "#",
+    demo: "#",
   },
   {
     name: "AI-based Image Manipulation Experiments",
     stack: ["Python", "OpenCV", "Machine Learning"],
     description:
-      "Experimental workflows for intelligent image enhancement, transformations, and model-driven visual effects.",
+      "Experimental computer vision workflows involving intelligent image enhancement, transformation pipelines, and ML-driven visual effects.",
+    github: "#",
+    demo: "#",
   },
   {
-    name: "Data Visualization Projects",
+    name: "Scientific Data Visualization Suite",
     stack: ["Pandas", "Matplotlib", "Scikit-learn"],
     description:
-      "Visualization-first analysis projects transforming raw data into clear insights through expressive scientific plots.",
+      "Data-driven visualization projects converting complex datasets into meaningful analytical insights through scientific plotting techniques.",
+    github: "#",
+    demo: "#",
+  },
+];
+
+export const stats = [
+  {
+    label: "Years Learning",
+    value: "3+",
+  },
+  {
+    label: "Projects Built",
+    value: "10+",
+  },
+  {
+    label: "Problems Solved",
+    value: "500+",
+  },
+  {
+    label: "Leadership Roles",
+    value: "3",
   },
 ];
 
 export const achievements = [
-  { label: "Codeforces Rating", value: "Specialist (Target)" },
-  { label: "LeetCode Problems Solved", value: "500+" },
-  { label: "Contests Participated", value: "50+" },
-  { label: "Leadership Roles", value: "3 Major Campus Bodies" },
+  {
+    label: "Codeforces Rating",
+    value: "1200+ (Pupil)",
+  },
+  {
+    label: "LeetCode Problems Solved",
+    value: "150+",
+  },
+  {
+    label: "Contests Participated",
+    value: "30+",
+  },
+  {
+    label: "Leadership Roles",
+    value: "3 Major Campus Bodies",
+  },
 ];
 
 export const aboutText = [
