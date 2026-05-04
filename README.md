@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ⚡ Shivam Dubey — Developer Portfolio
 
-## Getting Started
+“Building scalable ideas. Optimizing engineering systems. Solving algorithmic challenges.”
 
-First, run the development server:
+A futuristic, high-performance personal portfolio built with Next.js, TypeScript, and Tailwind CSS, showcasing engineering depth, competitive programming expertise, and technical leadership.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+🔗 Live Demo: https://portfolio-seven-green-86.vercel.app/
+💻 Repository: https://github.com/devsivv/portfolio
+
+---
+
+## 🛠️ Tech Stack
+
+### 💻 Frontend
+
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Framer Motion
+
+### 🧠 Programming
+
+- Python
+- C++
+- JavaScript
+
+### 📊 Data Science
+
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+
+### ⚙️ Engineering Domains
+
+- Mass Transfer
+- Reaction Engineering
+- Process Technology
+
+---
+
+## ✨ Features
+
+- 🌑 Dark futuristic cyberpunk UI
+- ⚡ Smooth animations with Framer Motion
+- 🧩 Modular component architecture
+- 📱 Fully responsive design
+- 🧠 Code-editor styled UI elements
+- 🔗 Integrated social links (GitHub, LinkedIn, Codeforces)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── app/
+│   ├── page.tsx        # Main entry page
+│   ├── layout.tsx      # Root layout
+│   └── globals.css     # Global styles
+│
+├── components/
+│   └── portfolio/
+│       ├── PortfolioPage.tsx
+│       └── CodeEditorCard.tsx
+│
+├── data/
+│   └── portfolio.ts    # All content (projects, skills, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚧 Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Industrial Process Reports (Ammonia, Ethylene Oxide)
+- Competitive Programming Dashboard
+- AI-based Image Manipulation Experiments
+- Data Visualization Systems
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⚡ Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. Clone the repository
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+git clone https://github.com/devsivv/portfolio.git
+cd portfolio
+```
 
-## Deploy on Vercel
+### 2. Install dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+npm install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 3. Run development server
+
+```
+npm run dev
+```
+
+### 4. Build for production
+
+```
+npm run build
+```
+
+---
+
+## 🚀 Deployment
+
+Deployed using **Vercel**
+
+Every push to GitHub automatically triggers a new deployment.
+
+---
+
+## 🎯 Future Improvements
+
+- 🔥 Advanced animations & micro-interactions
+- 📊 Live coding stats integration (Codeforces, LeetCode)
+- 🤖 AI-powered features
+- 🌐 Custom domain
+
+---
+
+## 📬 Contact
+
+- 📧 Email: shivamdubey9040@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/shivam-dubey-32a55331a/
+- 💻 GitHub: https://github.com/devsivv/
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+- ⭐ Star the repo
+- 🍴 Fork it
+- 🚀 Build your own version
+
+---
+
+## ⚡ Philosophy
+
+> “Whether optimizing a distillation column or debugging an algorithm, precision and efficiency define my approach.”
+
+---
+
+### 💙 Built with simplicity and purpose.
+
