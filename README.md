@@ -148,5 +148,13 @@ If you like this project:
 
 ---
 
-### 💙 Built with simplicity and purpose.
+## 🎊 Credits
+<h3 align ="center" > 
+  Built by Shivam Dubey (https://github.com/devsivv) 
+</h3>
 
+---
+
+<h1 align="center">
+ Happy+Coding! 💻✨
+</h1>
