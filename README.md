@@ -5,7 +5,6 @@
 A futuristic, high-performance personal portfolio built with Next.js, TypeScript, and Tailwind CSS, showcasing engineering depth, competitive programming expertise, and technical leadership.
 
 🔗 Live Demo: https://portfolio-seven-green-86.vercel.app/
-💻 Repository: https://github.com/devsivv/portfolio
 
 ---
 
